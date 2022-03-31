@@ -72,7 +72,7 @@ vendor/lib64/libvmmem.so
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so
 
 # AGM
--odm/lib64/libagmdevice.so
+odm/lib64/libagmdevice.so
 vendor/bin/agmcap
 vendor/bin/agmcompresscap
 vendor/bin/agmcompressplay
@@ -80,13 +80,13 @@ vendor/bin/agmhostless
 vendor/bin/agmplay
 vendor/bin/agmvoiceui
 vendor/bin/cplay
--vendor/lib64/libagm.so
+vendor/lib64/libagm.so
 vendor/lib64/libagm_compress_plugin.so
 vendor/lib64/libagm_mixer_plugin.so
 vendor/lib64/libagm_pcm_plugin.so
 vendor/lib64/libagmclient.so
 vendor/lib64/libagmmixer.so
--vendor/lib64/vendor.qti.hardware.AGMIPC@1.0-impl.so
+vendor/lib64/vendor.qti.hardware.AGMIPC@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.AGMIPC@1.0.so
 
 # Audio
@@ -105,9 +105,9 @@ vendor/lib64/libadm.so
 vendor/lib64/libar-acdb.so
 vendor/lib64/libarmemlog.so
 vendor/lib64/libar-gpr.so
--vendor/lib64/libar-gsl.so
--vendor/lib64/libar-pal.so
--vendor/lib64/libats.so
+vendor/lib64/libar-gsl.so
+vendor/lib64/libar-pal.so
+vendor/lib64/libats.so
 vendor/lib64/libaudio_log_utils.so
 vendor/lib64/libaudiocloudctrl.so
 vendor/lib64/libcapiv2svacnnvendor.so
@@ -119,7 +119,7 @@ vendor/lib64/libdlbpreg.so
 vendor/lib64/libfmpal.so
 vendor/lib64/libkaraokepal.so
 vendor/lib64/liblx-ar_util.so
--vendor/lib64/liblx-osal.so
+vendor/lib64/liblx-osal.so
 vendor/lib64/libmcs.so
 vendor/lib64/libmisight.so
 vendor/lib64/libmisfpsop.so
@@ -133,7 +133,7 @@ vendor/lib64/libswspatializer_ext.so
 vendor/lib64/libtensorflowlite_c.so
 vendor/lib64/libvibratorutils.so
 vendor/lib64/libxlog.so
--vendor/lib64/vendor.qti.hardware.pal@1.0-impl.so
+vendor/lib64/vendor.qti.hardware.pal@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.pal@1.0.so
 vendor/lib64/vendor.qti.voiceprint@1.0.so
 
@@ -1807,8 +1807,8 @@ vendor/lib64/libsxrservice.so
 vendor/bin/hw/android.hardware.thermal-service.qti
 vendor/etc/init/android.hardware.thermal-service.qti.rc
 vendor/etc/vintf/manifest/android.hardware.thermal-service.qti.xml
--vendor/lib64/liblmthermallistner.so
--vendor/lib64/libthermalclient.so
+vendor/lib64/liblmthermallistner.so
+vendor/lib64/libthermalclient.so
 
 # Thermal engine
 vendor/bin/mi_thermald
