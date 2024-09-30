@@ -12,6 +12,8 @@ set -e
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "${MY_DIR}" ]]; then MY_DIR="${PWD}"; fi
 
+export TARGET_ENABLE_CHECKELF="true"
+
 ANDROID_ROOT="${MY_DIR}/../../.."
 
 HELPER="${ANDROID_ROOT}/tools/extract-utils/extract_utils.sh"
@@ -39,14 +41,37 @@ function lib_to_package_fixup_vendor_variants() {
     fi
 
     case "$1" in
+        com.qualcomm.qti.dpm.api@1.0      | \
+        vendor.qti.hardware.qccsyshal@1.0 | \
+        vendor.qti.hardware.qccsyshal@1.1 | \
+        vendor.qti.hardware.qccsyshal@1.2 | \
+        vendor.qti.qccvndhal_aidl-V1-ndk  | \
+        vendor.qti.ims.callcapability@1.0 | \
+        vendor.qti.ims.callcapabilityaidlservice-V1-ndk | \
+        vendor.qti.ims.callinfo@1.0       | \
+        vendor.qti.ims.configaidlservice-V1-ndk | \
+        vendor.qti.ims.connectionaidlservice-V1-ndk | \
+        vendor.qti.ims.factory@1.0        | \
+        vendor.qti.ims.factory@1.1        | \
+        vendor.qti.ims.factoryaidlservice-V1-ndk | \
+        vendor.qti.ims.rcsconfig@1.0       | \
+        vendor.qti.ims.rcsconfig@1.1       | \
+        vendor.qti.ims.rcsconfig@2.0       | \
+        vendor.qti.ims.rcsconfig@2.1       | \
+        vendor.qti.ims.rcssipaidlservice-V1-ndk | \
+        vendor.qti.ims.rcsuceaidlservice-V1-ndk | \
+        vendor.qti.hardware.wifidisplaysession@1.0 | \
+        vendor.qti.hardware.dpmaidlservice-V1-ndk | \
+        vendor.qti.hardware.dpmservice@1.0 | \
+        vendor.qti.hardware.dpmservice@1.1 | \
+        vendor.qti.ImsRtpService-V1-ndk   | \
+        vendor.qti.imsrtpservice@3.0      | \
+        vendor.qti.imsrtpservice@3.1      | \
+        vendor.qti.diaghal@1.0)
             echo "$1-vendor"
             ;;
-        libagmclient | \
-        libpalclient | \
-        libwpa_client) ;;
         *)
             return 1
-            ;;
     esac
 }
 
@@ -54,12 +79,6 @@ function lib_to_package_fixup_odm_variants() {
     if [ "$2" != "odm" ]; then
         return 1
     fi
-    case "$1" in
-        libagmmixer) ;;
-        *)
-            return 1
-            ;;
-    esac
 }
 
 function lib_to_package_fixup() {
