@@ -407,6 +407,12 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/xiaomi
 
+ifeq ($(TARGET_DEVICE),manet)
+PRODUCT_SOONG_NAMESPACES += \
+    kernel/xiaomi/sm8650 \
+    kernel/xiaomi/sm8650-modules
+endif
+
 # Telephony
 PRODUCT_PACKAGES += \
     extphonelib \
