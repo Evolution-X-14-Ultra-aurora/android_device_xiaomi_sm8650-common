@@ -75,7 +75,7 @@ public class EdgeSuppressionManager {
 
     public int[] handleEdgeSuppressionChange() {
         int rotation = ((WindowManager) mContext.getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay().getRotation();
-        float width = PreferenceManager.getDefaultSharedPreferences(mContext).getFloat("edgesuppression_width_value", getDefaultWidthValue());
+        float width = PreferenceManager.getDefaultSharedPreferences(mContext).getFloat("edgesuppression_width_value", 0.8f);
         int[] suppressionRect = getSuppressionRect(rotation, width);
         TfWrapper.setTouchFeature(new TfWrapper.TfParams(15, suppressionRect));
         return suppressionRect;

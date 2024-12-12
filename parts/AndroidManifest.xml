@@ -28,6 +28,7 @@
             android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </receiver>
@@ -56,6 +57,22 @@
 
         <service
             android:name=".edgesuppression.EdgeSuppressionService"
+            android:exported="true">
+        </service>
+
+        <service
+            android:name=".thermal.ThermalProfileTileService"
+            android:icon="@drawable/ic_thermal_tile"
+            android:label="@string/thermalprofile_title"
+            android:exported="true"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
+
+        <service
+            android:name=".touch.TouchOrientationService"
             android:exported="true">
         </service>
 
