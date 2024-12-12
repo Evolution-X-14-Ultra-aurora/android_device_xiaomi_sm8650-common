@@ -27,6 +27,13 @@ allow platform_app vendor_hal_camerapostproc_xiaomi:binder { call transfer };
 allow platform_app vendor_hal_camerapostproc_xiaomi:binder transfer;
 allow platform_app vendor_hal_camerapostproc_xiaomi:fd *;
 allow platform_app vendor_hal_fingerprint_service_xiaomi:service_manager { find };
+allow platform_app app_data_file:file execute;
+allow platform_app vendor_hal_camerapostproc_xiaomi_hwservice:hwservice_manager find;
+binder_call(platform_app, hal_camera_default)
+get_prop(platform_app, vendor_camera_prop)
+get_prop(platform_app, vendor_fp_prop)
+get_prop(platform_app, vendor_display_prop)
+get_prop(platform_app, vendor_panel_info_prop)
 binder_call(platform_app, hal_camera_default)
 get_prop(platform_app, qemu_hw_prop)
 get_prop(platform_app, vendor_camera_sensor_prop)

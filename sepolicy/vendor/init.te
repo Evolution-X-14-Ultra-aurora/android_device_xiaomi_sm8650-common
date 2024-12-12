@@ -2,6 +2,7 @@
 allow init vendor_sysfs_usb_supply:file setattr;
 allow init vendor_sysfs_battery_supply:file setattr;
 allow init vendor_sysfs_qcom_battery:file setattr;
+allow init vendor_sysfs_qcom_battery:file { open };
 
 # Displayfeature
 set_prop(init, vendor_displayfeature_prop)
@@ -34,3 +35,6 @@ allow init tpevent:process { rlimitinh siginh transition };
 allow init touchreport_exec:file { execute getattr open read };
 allow init touchreport:process { rlimitinh siginh transition };
 set_prop(vendor_init, vendor_touchfeature_prop)
+
+allow init same_process_hal_file:file { execute };
+allow init self:qipcrtr_socket { create getattr setopt write read };
