@@ -338,7 +338,6 @@ vendor/lib64/libwqe.so
 vendor/lib64/libxml.so
 vendor/lib64/vendor.qti.data.factoryservice-V1-ndk.so
 vendor/lib64/vendor.qti.data.slm@1.0.so
-vendor/lib64/vendor.qti.hardware.cacert@1.0.so
 vendor/lib64/vendor.qti.hardware.data.cneaidlservice.internal.api-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.data.cneaidlservice.internal.constants-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.data.cneaidlservice.internal.server-V1-ndk.so
@@ -681,7 +680,6 @@ vendor/lib64/hw/libqtigatekeeper.so
 
 # GNSS
 odm/etc/izat_device.conf
-vendor/app/CACertService/CACertService.apk
 vendor/bin/edgnss-daemon
 vendor/bin/engine-service
 vendor/bin/hw/android.hardware.gnss-aidl-service-qti
@@ -708,7 +706,6 @@ vendor/etc/xtwifi.conf
 vendor/lib64/hw/android.hardware.gnss-aidl-impl-qti.so
 vendor/lib64/libMiVDR.so
 vendor/lib64/libbatching.so
-vendor/lib64/libcacertclient.so
 vendor/lib64/libcdfw.so
 vendor/lib64/libcdfw_remote_api.so
 vendor/lib64/libdataitems.so
@@ -720,7 +717,6 @@ vendor/lib64/libgnsspps.so
 vendor/lib64/libgps.utils.so
 vendor/lib64/libizat_client_api.so
 vendor/lib64/libizat_core.so
-vendor/lib64/libjnihelper.so
 vendor/lib64/liblbs_core.so
 vendor/lib64/libloc_api_v02.so
 vendor/lib64/libloc_api_wds.so
