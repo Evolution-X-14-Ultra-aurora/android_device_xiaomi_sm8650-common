@@ -1,5 +1,6 @@
 type vendor_displaycount, domain;
 type vendor_displaycount_exec, exec_type, file_type, vendor_file_type;
+init_daemon_domain(vendor_displaycount)
 
 allow vendor_displaycount sysfs:file { open read write };
 allow vendor_displaycount vendor_display_vendor_data_file:dir create_dir_perms;
@@ -10,7 +11,7 @@ allow vendor_displaycount vendor_displayfeature_device:chr_file { ioctl open rea
 allow vendor_displaycount device:dir write;
 allow vendor_displaycount graphics_device:chr_file rw_file_perms;
 allow vendor_displaycount graphics_device:dir r_dir_perms;
-init_daemon_domain(vendor_displaycount)
+
 r_dir_file(vendor_displaycount, sysfs_type)
 r_dir_file(vendor_displaycount, rootfs)
 r_dir_file(vendor_displaycount, cgroup)

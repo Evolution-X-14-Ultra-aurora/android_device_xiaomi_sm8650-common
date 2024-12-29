@@ -1,91 +1,91 @@
 # Audio
-/dev/xlog                                 u:object_r:sound_device:s0
-/dev/socket/audio_hw_socket               u:object_r:audio_socket:s0
-/dev/socket/audio_us_socket_0             u:object_r:audio_socket:s0
-/dev/socket/audio_us_socket_1             u:object_r:audio_socket:s0
-/sys/devices/platform/soc/[a-z0-9]+.i2c/i2c-+[0-9]/[0-9]+-00+[a-z0-9]+[a-z0-9]/f0_value  u:object_r:sysfs_f0_value:s0
+/dev/xlog                                                                                 u:object_r:sound_device:s0
+/dev/socket/audio_hw_socket                                                               u:object_r:audio_socket:s0
+/dev/socket/audio_us_socket_0                                                             u:object_r:audio_socket:s0
+/dev/socket/audio_us_socket_1                                                             u:object_r:audio_socket:s0
+/sys/devices/platform/soc/[a-z0-9]+.i2c/i2c-+[0-9]/[0-9]+-00+[a-z0-9]+[a-z0-9]/f0_value   u:object_r:sysfs_f0_value:s0
 
 # Battery secret
-/(vendor|system/vendor)/bin/batterysecret u:object_r:batterysecret_exec:s0
+/(vendor|system/vendor)/bin/batterysecret                                                 u:object_r:batterysecret_exec:s0
 
 # Camera
-/data/vendor/perfspy(/.*)?                                                    u:object_r:vendor_camera_data_file:s0
-/dev/stmvl53l5                                                                u:object_r:stmvl53l5_device:s0
-/mnt/vendor/persist/camera(/.*)?                                              u:object_r:camera_persist_file:s0
-/persist/camera(/.*)?                                                         u:object_r:camera_persist_file:s0
-/vendor/bin/camera_cal                                                        u:object_r:DualCameraCal_exec:s0
+/data/vendor/perfspy(/.*)?                                                                u:object_r:vendor_camera_data_file:s0
+/dev/stmvl53l5                                                                            u:object_r:stmvl53l5_device:s0
+/mnt/vendor/persist/camera(/.*)?                                                          u:object_r:camera_persist_file:s0
+/persist/camera(/.*)?                                                                     u:object_r:camera_persist_file:s0
+/vendor/bin/camera_cal                                                                    u:object_r:DualCameraCal_exec:s0
 
 # Display
-/sys/class/backlight(/.*)?                                                    u:object_r:vendor_sysfs_graphics:s0
+/sys/class/backlight(/.*)?                                                                u:object_r:vendor_sysfs_graphics:s0
 
 # Displayfeature
-/dev/mi_display/disp_feature u:object_r:vendor_displayfeature_device:s0
-/sys/devices/virtual/mi_display/disp_feature/disp-DSI-+[0-1](/.*)? u:object_r:vendor_sysfs_displayfeature:s0
-/(vendor|system/vendor)/bin/displayfeature u:object_r:vendor_displayfeature_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor\.xiaomi\.hardware\.displayfeature_aidl-service u:object_r:vendor_hal_displayfeature_xiaomi_default_exec:s0
+/dev/mi_display/disp_feature                                                              u:object_r:vendor_displayfeature_device:s0
+/sys/devices/virtual/mi_display/disp_feature/disp-DSI-+[0-1](/.*)?                        u:object_r:vendor_sysfs_displayfeature:s0
+/(vendor|system/vendor)/bin/displayfeature                                                u:object_r:vendor_displayfeature_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.xiaomi\.hardware\.displayfeature_aidl-service      u:object_r:vendor_hal_displayfeature_xiaomi_default_exec:s0
 
 # Dolby
-/data/vendor/dolby(/.*)?                                                               u:object_r:vendor_data_file:s0
-/vendor/bin/hw/vendor\.dolby\.media\.c2@1\.0-service                                   u:object_r:mediacodec_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor\.dolby\.hardware\.dms@2\.0-service               u:object_r:hal_dms_default_exec:s0
+/data/vendor/dolby(/.*)?                                                                  u:object_r:vendor_data_file:s0
+/vendor/bin/hw/vendor\.dolby\.media\.c2@1\.0-service                                      u:object_r:mediacodec_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.dolby\.hardware\.dms@2\.0-service                  u:object_r:hal_dms_default_exec:s0
 
 # EID
-/(vendor|system/vendor)/bin/hw/vendor\.rongcard\.eid@1\.0-service                      u:object_r:vendor_hal_eid_rc_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.rongcard\.eid@1\.0-service                         u:object_r:vendor_hal_eid_rc_exec:s0
 
 # Fingerprint
-/data/vendor/misc/mi_fp(/.*)? u:object_r:vendor_fingerprint_data_file:s0
-/data/vendor/fpc(/.*)? u:object_r:vendor_fingerprint_data_file:s0
-/data/vendor/goodix(/.*)? u:object_r:vendor_fingerprint_data_file:s0
-/dev/goodix_fp u:object_r:vendor_fingerprint_device:s0
-/mnt/vendor/persist/goodix(/.*)? u:object_r:vendor_fingerprint_data_file:s0
-/sys/devices/virtual/touch/tp_dev/fod_status u:object_r:sysfs_tp_fodstatus:s0
+/data/vendor/misc/mi_fp(/.*)?                                                             u:object_r:vendor_fingerprint_data_file:s0
+/data/vendor/fpc(/.*)?                                                                    u:object_r:vendor_fingerprint_data_file:s0
+/data/vendor/goodix(/.*)?                                                                 u:object_r:vendor_fingerprint_data_file:s0
+/dev/goodix_fp                                                                            u:object_r:vendor_fingerprint_device:s0
+/mnt/vendor/persist/goodix(/.*)?                                                          u:object_r:vendor_fingerprint_data_file:s0
+/sys/devices/virtual/touch/tp_dev/fod_status                                              u:object_r:sysfs_tp_fodstatus:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint-service\.xiaomi u:object_r:hal_fingerprint_default_exec:s0
-/(odm|system/odm|vendor|system/vendor)/bin/hw/vendor\.xiaomi\.hardware\.dtool1-service u:object_r:vendor_dtool_exec:s0
+/(odm|system/odm|vendor|system/vendor)/bin/hw/vendor\.xiaomi\.hardware\.dtool1-service    u:object_r:vendor_dtool_exec:s0
 /vendor/bin/hw/mfp-daemon u:object_r:vendor_mfp-daemon_exec:s0
 
 # HAL
-/(vendor|system/vendor)/bin/hw/android\.hardware\.ir@1\.0-service\.xiaomi              u:object_r:hal_ir_default_exec:s0
-/(vendor|system/vendor)/bin/hw/android\.hardware\.health-service\.xiaomi               u:object_r:hal_health_default_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.vibrator\.service\.xiaomi        u:object_r:hal_vibrator_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.ir@1\.0-service\.xiaomi                 u:object_r:hal_ir_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.health-service\.xiaomi                  u:object_r:hal_health_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.vibrator\.service\.xiaomi           u:object_r:hal_vibrator_default_exec:s0
 
 # IR
 /dev/ir_spi                               u:object_r:ir_spi_device:s0
 
 # MiCharge
-/(vendor|system/vendor)/bin/hw/vendor.xiaomi.hardware.micharge-service     u:object_r:vendor_hal_micharge_xiaomi_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor.xiaomi.hardware.micharge-service                    u:object_r:vendor_hal_micharge_xiaomi_default_exec:s0
 
 # Mlipay
-/(odm|vendor/odm|vendor|system/vendor)/bin/fidoca        u:object_r:hal_mfidoca_default_exec:s0
-/(odm|vendor/odm|vendor|system/vendor)/bin/mlipayd      u:object_r:hal_mlipay_default_exec:s0
-/(odm|vendor/odm|vendor|system/vendor)/bin/mtd          u:object_r:hal_mtdservice_default_exec:s0
-/(odm|vendor/odm|vendor|system/vendor)/bin/tidad        u:object_r:hal_tidaservice_default_exec:s0
+/(odm|vendor/odm|vendor|system/vendor)/bin/fidoca                                         u:object_r:hal_mfidoca_default_exec:s0
+/(odm|vendor/odm|vendor|system/vendor)/bin/mlipayd                                        u:object_r:hal_mlipay_default_exec:s0
+/(odm|vendor/odm|vendor|system/vendor)/bin/mtd                                            u:object_r:hal_mtdservice_default_exec:s0
+/(odm|vendor/odm|vendor|system/vendor)/bin/tidad                                          u:object_r:hal_tidaservice_default_exec:s0
 
 # Modem
-/data/vendor/modem(/.*)?                                u:object_r:vendor_modem_data_file:s0
+/data/vendor/modem(/.*)?                                                                  u:object_r:vendor_modem_data_file:s0
 
 # Powershare
-/vendor/bin/hw/vendor\.lineage\.powershare@1\.0-service\.aurora                          u:object_r:hal_lineage_powershare_default_exec:s0
+/vendor/bin/hw/vendor\.lineage\.powershare@1\.0-service\.aurora                           u:object_r:hal_lineage_powershare_default_exec:s0
 
 # Ril
-/dev/smd8                                         u:object_r:vendor_radio_smd_device:s0
+/dev/smd8                                                                                 u:object_r:vendor_radio_smd_device:s0
 
 # Same-process HAL files and their dependencies
-/(vendor|odm|odm/mount/camera)/lib/rfsa/adsp/libcalculator_skel\.so                 u:object_r:same_process_hal_file:s0
-/(vendor|odm|odm/mount/camera)/lib/rfsa/adsp/libCalculator_skel\.so                 u:object_r:same_process_hal_file:s0
-/(vendor|odm|odm/mount/camera)/lib/rfsa/adsp/libmialgo_basic_cdsp_skel\.so          u:object_r:same_process_hal_file:s0
-/(vendor|odm|odm/mount/camera)/lib/rfsa/adsp/libmialgo_slow_motion_cdsp_skel\.so    u:object_r:same_process_hal_file:s0
-/(vendor|odm|odm/mount/camera)/lib/rfsa/adsp/libQnnHtpV69Skel\.so                   u:object_r:same_process_hal_file:s0
-/(vendor|odm|odm/mount/camera)/lib/rfsa/adsp/libSnpeDspV65Skel\.so                  u:object_r:same_process_hal_file:s0
-/(vendor|odm|odm/mount/camera)/lib/rfsa/adsp/libSnpeDspV66Skel\.so                  u:object_r:same_process_hal_file:s0
-/(vendor|odm|odm/mount/camera)/lib/rfsa/adsp/libSnpeHtpV68Skel\.so                  u:object_r:same_process_hal_file:s0
-/(vendor|odm|odm/mount/camera)/lib/rfsa/adsp/libSnpeHtpV69Skel\.so                  u:object_r:same_process_hal_file:s0
-/(vendor|odm|odm/mount/camera)/lib/rfsa/adsp/libSnpeHtpV73Skel\.so                  u:object_r:same_process_hal_file:s0
-/(vendor|odm|odm/mount/camera)/lib/rfsa/adsp/libsnpe_dsp_v65_domains_v2_skel\.so    u:object_r:same_process_hal_file:s0
-/(vendor|odm|odm/mount/camera)/lib/rfsa/adsp/libsnpe_dsp_v66_domains_v2_skel\.so    u:object_r:same_process_hal_file:s0
-/(vendor|odm|odm/mount/camera)/lib/rfsa/adsp/libsnpe_dsp_v68_domains_v3_skel\.so    u:object_r:same_process_hal_file:s0
-/(vendor|odm|odm/mount/camera)/lib/rfsa/adsp/libsnpe_htp_v65_skel\.so               u:object_r:same_process_hal_file:s0
-/(vendor|odm|odm/mount/camera)/lib/rfsa/adsp/libsnpe_htp_v66_skel\.so               u:object_r:same_process_hal_file:s0
-/(vendor|odm|odm/mount/camera)/lib/rfsa/adsp/libsnpe_htp_v68_skel\.so               u:object_r:same_process_hal_file:s0
+/(vendor|odm|odm/mount/camera)/lib/rfsa/adsp/libcalculator_skel\.so                       u:object_r:same_process_hal_file:s0
+/(vendor|odm|odm/mount/camera)/lib/rfsa/adsp/libCalculator_skel\.so                       u:object_r:same_process_hal_file:s0
+/(vendor|odm|odm/mount/camera)/lib/rfsa/adsp/libmialgo_basic_cdsp_skel\.so                u:object_r:same_process_hal_file:s0
+/(vendor|odm|odm/mount/camera)/lib/rfsa/adsp/libmialgo_slow_motion_cdsp_skel\.so          u:object_r:same_process_hal_file:s0
+/(vendor|odm|odm/mount/camera)/lib/rfsa/adsp/libQnnHtpV69Skel\.so                         u:object_r:same_process_hal_file:s0
+/(vendor|odm|odm/mount/camera)/lib/rfsa/adsp/libSnpeDspV65Skel\.so                        u:object_r:same_process_hal_file:s0
+/(vendor|odm|odm/mount/camera)/lib/rfsa/adsp/libSnpeDspV66Skel\.so                        u:object_r:same_process_hal_file:s0
+/(vendor|odm|odm/mount/camera)/lib/rfsa/adsp/libSnpeHtpV68Skel\.so                        u:object_r:same_process_hal_file:s0
+/(vendor|odm|odm/mount/camera)/lib/rfsa/adsp/libSnpeHtpV69Skel\.so                        u:object_r:same_process_hal_file:s0
+/(vendor|odm|odm/mount/camera)/lib/rfsa/adsp/libSnpeHtpV73Skel\.so                        u:object_r:same_process_hal_file:s0
+/(vendor|odm|odm/mount/camera)/lib/rfsa/adsp/libsnpe_dsp_v65_domains_v2_skel\.so          u:object_r:same_process_hal_file:s0
+/(vendor|odm|odm/mount/camera)/lib/rfsa/adsp/libsnpe_dsp_v66_domains_v2_skel\.so          u:object_r:same_process_hal_file:s0
+/(vendor|odm|odm/mount/camera)/lib/rfsa/adsp/libsnpe_dsp_v68_domains_v3_skel\.so          u:object_r:same_process_hal_file:s0
+/(vendor|odm|odm/mount/camera)/lib/rfsa/adsp/libsnpe_htp_v65_skel\.so                     u:object_r:same_process_hal_file:s0
+/(vendor|odm|odm/mount/camera)/lib/rfsa/adsp/libsnpe_htp_v66_skel\.so                     u:object_r:same_process_hal_file:s0
+/(vendor|odm|odm/mount/camera)/lib/rfsa/adsp/libsnpe_htp_v68_skel\.so                     u:object_r:same_process_hal_file:s0
 /(vendor|odm)/lib(64)?/libalAILDC\.so                                   u:object_r:same_process_hal_file:s0
 /(vendor|odm)/lib(64)?/libalCFR\.so                                     u:object_r:same_process_hal_file:s0
 /(vendor|odm)/lib(64)?/libalhLDC\.so                                    u:object_r:same_process_hal_file:s0

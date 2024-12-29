@@ -1,3 +1,5 @@
+neverallow { domain -servicemanager -hwservicemanager -vndservicemanager -appdomain -coredomain } *:binder set_context_mgr;
+
 type parts_app, domain;
 typeattribute parts_app mlstrustedsubject;
 
