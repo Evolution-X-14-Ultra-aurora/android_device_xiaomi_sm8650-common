@@ -35,7 +35,6 @@ allow vendor_hal_citsensorservice_xiaomi_default hal_graphics_composer:binder { 
 allow vendor_hal_citsensorservice_xiaomi_default hal_graphics_composer:fd *;
 allow vendor_hal_citsensorservice_xiaomi_default vendor_qdisplay_service:service_manager find;
 allow vendor_hal_citsensorservice_xiaomi_default hal_graphics_composer_default:binder transfer;
-allow vendor_hal_citsensorservice_xiaomi_default sysfs_tp_fodstatus:file { open read };
 allowxperm vendor_hal_citsensorservice_xiaomi_default self:socket ioctl { 0xc300 0xc301 0xc302 0xc303 0xc304 0xc305 };
 allowxperm vendor_hal_citsensorservice_xiaomi_default self:qipcrtr_socket ioctl { 0xc300 0xc301 0xc302 0xc303 0xc304 0xc305 };
 init_daemon_domain(vendor_hal_citsensorservice_xiaomi_default)
@@ -53,4 +52,3 @@ hal_server_domain(vendor_hal_citsensorservice_xiaomi_default, vendor_hal_citsens
 hal_client_domain(vendor_hal_citsensorservice_xiaomi_default, hal_graphics_allocator)
 hal_client_domain(vendor_hal_citsensorservice_xiaomi_default, hal_graphics_composer)
 add_service(vendor_hal_citsensorservice_xiaomi_server, vendor_hal_citsensorservice_xiaomi_service)
-get_prop(vendor_hal_citsensorservice_xiaomi_default, vendor_qc_aon_prop)

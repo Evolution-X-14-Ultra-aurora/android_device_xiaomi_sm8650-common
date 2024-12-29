@@ -1,2 +1,0 @@
-binder_call(hal_camera_default, platform_app)
-allow hal_camera_default sysfs:file { write };

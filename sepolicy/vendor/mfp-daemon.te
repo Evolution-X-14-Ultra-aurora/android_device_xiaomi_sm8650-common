@@ -49,8 +49,6 @@ allow vendor_mfp-daemon unlabeled:filesystem getattr;
 allow vendor_mfp-daemon unlabeled:lnk_file read;
 allow vendor_mfp-daemon vendor_data_file:dir rw_dir_perms;
 allow vendor_mfp-daemon vendor_data_file:file { open read write create };
-allow vendor_mfp-daemon sysfs_touch_hostprocess:file { read };
-allow vendor_mfp-daemon vendor_data_file:file { append };
 init_daemon_domain(vendor_mfp-daemon)
 r_dir_file(vendor_mfp-daemon, firmware_file)
 r_dir_file(vendor_mfp-daemon, mnt_vendor_file)

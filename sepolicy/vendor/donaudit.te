@@ -1,3 +1,0 @@
-dontaudit untrusted_app ashmem_device:chr_file open;
-dontaudit untrusted_app batterysecret:chr_file open;
-dontaudit untrusted_app vendor_displaycount:chr_file open;

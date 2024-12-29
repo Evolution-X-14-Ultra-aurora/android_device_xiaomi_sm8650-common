@@ -1,3 +1,2 @@
-allow system_suspend_server batterysecret:binder transfer;
 allow system_suspend_server charger:binder transfer;
 allow system_suspend_server healthd:binder transfer;
