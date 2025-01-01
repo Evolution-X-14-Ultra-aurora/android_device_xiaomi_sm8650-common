@@ -137,10 +137,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.full.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.full.xml \
     frameworks/native/data/etc/android.hardware.camera.raw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.raw.xml
 
-# Boot animation
-TARGET_SCREEN_HEIGHT := 2670
-TARGET_SCREEN_WIDTH := 1200
-
 # Boot control
 PRODUCT_PACKAGES += \
     android.hardware.boot-service.qti \

@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
-## are from Xiaomi 14 Ultra (OS1.0.11.3.UNACNXM). 
+## are from Xiaomi 14 Ultra (OS2.0.2.0.VNAEUXM). 
 
 # ACDB
 vendor/etc/acdbdata/IDP_UPD/IDP_UPD_acdb_cal.acdb

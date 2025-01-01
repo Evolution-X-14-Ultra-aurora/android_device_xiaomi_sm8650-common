@@ -8,7 +8,6 @@ COMMON_PATH := device/xiaomi/sm8650-common
 
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
-TARGET_GRALLOC_HANDLE_HAS_UBWCP_FORMAT := true
 
 # A/B
 AB_OTA_UPDATER := true
@@ -67,11 +66,13 @@ TARGET_BOOTLOADER_BOARD_NAME := pineapple
 TARGET_NO_BOOTLOADER := true
 TARGET_USES_UEFI := true
 
+# Dolby Vision
+SOONG_CONFIG_NAMESPACES += dolby_vision
+SOONG_CONFIG_dolby_vision += enabled
+SOONG_CONFIG_dolby_vision_enabled := true
+
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/configs/config.fs
-
-# Display
-TARGET_SCREEN_DENSITY := 480
 
 # Init
 TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):libinit_xiaomi_8650
@@ -105,7 +106,6 @@ BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_RAMDISK_USE_LZ4 := true
 BOARD_USES_GENERIC_KERNEL_IMAGE := true
 
-TARGET_NO_KERNEL_OVERRIDE := true
 TARGET_KERNEL_SOURCE := device/xiaomi/aurora-kernel/kernel-headers
 
 # Lineage Health
@@ -158,9 +158,6 @@ TARGET_USERIMAGES_USE_F2FS := true
 
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
-
-# VNDK
-BOARD_VNDK_VERSION := current
 
 # Sepolicy
 include device/lineage/sepolicy/libperfmgr/sepolicy.mk
